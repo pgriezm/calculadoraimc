@@ -1,5 +1,6 @@
 package com.comunidadedevspace.imc
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -49,6 +50,19 @@ class MainActivity : AppCompatActivity() {
 
             val alturaQ2 = altura * altura
             val resultado = peso / alturaQ2
+
+                // Navegar para a proxima tela
+                // criar o Layout para a proxima tela
+                // passar os dados (resultado) para a proxima tela
+
+                // Intent - é uma classe do proprio android para passar os dados de uma tela para a outra
+                // a intent tem Explicit intents e Implicit intents
+
+                val intent = Intent(this,ResultActivity::class.java)
+                intent.putExtra(KEY_RESULT_IMC, resultado)
+                startActivity(intent)
+
+
 
 
             println("Pedro ação do botão" + resultado)
