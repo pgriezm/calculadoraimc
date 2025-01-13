@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 // essa linha abaixo serve para todo o documento saber a senha do conteudo que veio no getFloatExtra da outra pagina
+
 const val KEY_RESULT_IMC = "ResultActivity,KEY_IMC"
 
 class ResultActivity : AppCompatActivity() {
@@ -24,7 +25,7 @@ class ResultActivity : AppCompatActivity() {
 
         tvResult.text = result.toString()
 
-        var classifição: String? = if (result <= 18.5f){
+        val classifição: String? = if (result <= 18.5f){
             "MAGREZA"
         } else if (result > 18.5f && result <= 24.9f) {
             "NORMAL"
