@@ -26,15 +26,15 @@ class ResultActivity : AppCompatActivity() {
         tvResult.text = result.toString()
 
         val classifição: String? = if (result <= 18.5f){
-            "MAGREZA"
+            "UNDERWEIGHT"
         } else if (result > 18.5f && result <= 24.9f) {
-            "NORMAL"
+            "HEALTHY"
         } else if (result > 25f && result <= 29.9f) {
-            "SOBREPESO"
+            "OVERWEIGHT"
         } else if (result > 30f && result <= 39.9f) {
-            "OBESIDADE"
+            "OBESITY"
         } else {
-            "OBESIDADE GRAVE"
+            "SEVERE OBESITY"
         }
 
 
